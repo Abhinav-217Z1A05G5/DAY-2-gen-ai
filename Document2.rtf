@@ -1,0 +1,225 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 1) **Difference between JSON and XML**:\par
+   JSON (JavaScript Object Notation) and XML (eXtensible Markup Language) are both widely used formats for representing structured data. The main differences between them are:\par
+   - JSON is more lightweight and easier for humans to read and write compared to XML.\par
+   - XML supports namespaces, which allow for better organization and structuring of data, while JSON does not have a built-in namespace concept.\par
+   - JSON is more commonly used for data interchange in web applications, especially those using JavaScript, while XML is often used in environments where there is a need for strong schema validation and document structure.\par
+\par
+2) **Create 3 XML and JSON files for department, year, student**:\par
+\par
+   XML files:\par
+   - department.xml:\par
+     <department>\par
+         <name>Computer Science</name>\par
+     </department>\par
+\par
+   - year.xml:\par
+     <year>\par
+         <value>2024</value>\par
+     </year>\par
+\par
+   - student.xml:\par
+     <student>\par
+         <name>John Doe</name>\par
+         <age>20</age>\par
+         <department>Computer Science</department>\par
+         <year>2024</year>\par
+     </student>\par
+\par
+   JSON files:\par
+   - department.json:\par
+     \{\par
+         "name": "Computer Science"\par
+     \}\par
+\par
+   - year.json:\par
+     \{\par
+         "value": 2024\par
+     \}\par
+\par
+   - student.json:\par
+     \{\par
+         "name": "John Doe",\par
+         "age": 20,\par
+         "department": "Computer Science",\par
+         "year": 2024\par
+     \}\par
+\par
+3) **Create a file with department as root, year as subroot, and student as an element**:\par
+   \par
+   XML file (department_year_student.xml):\par
+   <department>\par
+       <year>2024</year>\par
+       <student>\par
+           <name>John Doe</name>\par
+           <age>20</age>\par
+       </student>\par
+   </department>\par
+\par
+4) **Difference between Authorization and Authentication**:\par
+   - Authentication is the process of verifying the identity of a user, typically by asking for credentials like username and password.\par
+   - Authorization is the process of determining whether a user has permission to access certain resources or perform certain actions after they have been authenticated.\par
+\par
+5) **Create a Login Screen**:\par
+   <!DOCTYPE html>\par
+   <html lang="en">\par
+   <head>\par
+       <meta charset="UTF-8">\par
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+       <title>Login</title>\par
+   </head>\par
+   <body>\par
+       <form action="/login" method="post">\par
+           <label for="username">Username:</label><br>\par
+           <input type="text" id="username" name="username"><br>\par
+           <label for="password">Password:</label><br>\par
+           <input type="password" id="password" name="password"><br><br>\par
+           <input type="submit" value="Login">\par
+       </form>\par
+   </body>\par
+   </html>\par
+\par
+6) **Create a User Creation Screen using all elements (List, Radio button, Drop down, CheckBox)**:\par
+   <!DOCTYPE html>\par
+   <html lang="en">\par
+   <head>\par
+       <meta charset="UTF-8">\par
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+       <title>User Creation</title>\par
+   </head>\par
+   <body>\par
+       <form action="/create-user" method="post">\par
+           <label for="username">Username:</label><br>\par
+           <input type="text" id="username" name="username"><br>\par
+           <label for="password">Password:</label><br>\par
+           <input type="password" id="password" name="password"><br>\par
+           <label for="role">Role:</label><br>\par
+           <select id="role" name="role">\par
+               <option value="admin">Admin</option>\par
+               <option value="user">User</option>\par
+           </select><br>\par
+           <label>Gender:</label><br>\par
+           <input type="radio" id="male" name="gender" value="male">\par
+           <label for="male">Male</label><br>\par
+           <input type="radio" id="female" name="gender" value="female">\par
+           <label for="female">Female</label><br>\par
+           <label for="department">Department:</label><br>\par
+           <input list="departments" id="department" name="department">\par
+           <datalist id="departments">\par
+               <option value="IT">\par
+               <option value="Finance">\par
+               <option value="HR">\par
+           </datalist><br>\par
+           <input type="checkbox" id="terms" name="terms">\par
+           <label for="terms">I agree to the terms and conditions</label><br><br>\par
+           <input type="submit" value="Create User">\par
+       </form>\par
+   </body>\par
+   </html>\par
+\par
+7) **List all Users, Update user, and Delete user (Popup for confirmation, e.g., "Are you sure you want to delete")**:\par
+   <!DOCTYPE html>\par
+   <html lang="en">\par
+   <head>\par
+       <meta charset="UTF-8">\par
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+       <title>User Management</title>\par
+       <script>\par
+           function deleteUser(userId) \{\par
+               if (confirm("Are you sure you want to delete this user?")) \{\par
+                   // Code to delete user with userId\par
+               \}\par
+           \}\par
+       </script>\par
+   </head>\par
+   <body>\par
+       <h1>List of Users</h1>\par
+       <ul>\par
+           <li>User 1 <button onclick="deleteUser(1)">Delete</button></li>\par
+           <li>User 2 <button onclick="deleteUser(2)">Delete</button></li>\par
+           <li>User 3 <button onclick="deleteUser(3)">Delete</button></li>\par
+       </ul>\par
+   </body>\par
+   </html>\par
+8) **Create an HTML page with Google Map**:\par
+   <!DOCTYPE html>\par
+   <html>\par
+   <head>\par
+       <title>Google Maps Example</title>\par
+       <style>\par
+           #map \{\par
+               height: 400px;\par
+               width: 100%;\par
+           \}\par
+       </style>\par
+   </head>\par
+   <body>\par
+       <h1>Google Maps Example</h1>\par
+       <div id="map"></div>\par
+       <script>\par
+           function initMap() \{\par
+               var location = \{lat: -25.363, lng: 131.044\}; // Example location\par
+               var map = new google.maps.Map(document.getElementById('map'), \{\par
+                   zoom: 4,\par
+                   center: location\par
+               \});\par
+               var marker = new google.maps.Marker(\{\par
+                   position: location,\par
+                   map: map\par
+               \});\par
+           \}\par
+       </script>\par
+       <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>\par
+   </body>\par
+   </html>\par
+   ```\par
+\par
+   Replace `YOUR_API_KEY` with your actual Google Maps API key.\par
+\par
+9) **Create an HTML page with a Video file**:\par
+   <!DOCTYPE html>\par
+   <html>\par
+   <head>\par
+       <title>Video Example</title>\par
+   </head>\par
+   <body>\par
+       <h1>Video Example</h1>\par
+       <video width="320" height="240" controls>\par
+           <source src="movie.mp4" type="video/mp4">\par
+           Your browser does not support the video tag.\par
+       </video>\par
+   </body>\par
+   </html>\par
+\par
+10) **Create an HTML page with an Audio file**:\par
+   <!DOCTYPE html>\par
+   <html>\par
+   <head>\par
+       <title>Audio Example</title>\par
+   </head>\par
+   <body>\par
+       <h1>Audio Example</h1>\par
+       <audio controls>\par
+           <source src="audio.mp3" type="audio/mpeg">\par
+           Your browser does not support the audio element.\par
+       </audio>\par
+   </body>\par
+   </html>\par
+\par
+11) **Create an HTML page to upload a file**\par
+   <!DOCTYPE html>\par
+   <html>\par
+   <head>\par
+       <title>File Upload Example</title>\par
+   </head>\par
+   <body>\par
+       <h1>File Upload Example</h1>\par
+       <form action="/upload" method="post" enctype="multipart/form-data">\par
+           <input type="file" name="fileToUpload" id="fileToUpload">\par
+           <input type="submit" value="Upload File" name="submit">\par
+       </form>\par
+   </body>\par
+   </html>\par
+}
+ 
